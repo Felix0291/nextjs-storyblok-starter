@@ -12,12 +12,6 @@ export default function Hero({ blok }) {
         <div {...storyblokEditable(blok)} className={heroClasses} style={{
             backgroundImage: `url(${blok?.background_image?.filename})`
         }}>
-            <h1>
-            {blok.title}
-            </h1>
-            <h4>
-                {blok.description}
-            </h4>
         </div>
     )
 }
