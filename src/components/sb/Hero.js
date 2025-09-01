@@ -2,7 +2,12 @@
 import { storyblokEditable } from "@storyblok/react";
 
 export default function Hero({ blok }) {
-    console.log("hero", blok)
+
+
+    let heroClasses = `h-[50vh] bg-amber-400/25`
+
+
+
     return (
         <div {...storyblokEditable(blok)} >
             <h1>{blok.title}</h1>
