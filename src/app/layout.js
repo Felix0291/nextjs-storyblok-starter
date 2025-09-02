@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
   const global = await storyblok.get("cdn/stories/global", {
     version: "draft",
   });
-  console.log(global)
+
   return (
     <StoryBlokProvider>
       <html lang="en">

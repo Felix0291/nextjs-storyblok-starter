@@ -2,16 +2,21 @@
 import { storyblokEditable } from "@storyblok/react";
 
 export default function Hero({ blok }) {
-    console.log("HERO", blok)
-
-    let heroClasses = `h-[50vh] bg-amber-400/25`
-
-    console.log(blok.background_image?.filename)
-
+    console.log("hero", blok)
     return (
-        <div {...storyblokEditable(blok)} className={heroClasses} style={{
-            backgroundImage: `url(${blok?.background_image?.filename})`
-        }}>
+        <div {...storyblokEditable(blok)} >
+            <h1>{blok.title}</h1>
+            <div>{blok.description}</div>
+            {blok.links && blok.links.map(link => (
+                <a
+                    key={link._uid}
+                    href={link.link?.url || link.link?.cached_url}
+                    className="text-blue-600 hover:underline"
+                >
+                    {link.text}
+                </a>
+            ))}
+
         </div>
     )
 }
