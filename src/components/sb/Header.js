@@ -11,4 +11,3 @@ console.log("header::::",blok)
     </div>
   );
 }
-s
