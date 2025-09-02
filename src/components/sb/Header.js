@@ -5,9 +5,10 @@ export default function Header({ blok }) {
 console.log("header::::",blok)
   return (
     <div
-      {...storyblokEditable(blok)} className="w-250 bg-fixed h-150" style={{backgroundImage: `url(${blok?.logo.filename})`}}
+      {...storyblokEditable(blok)} className="w-full bg-fixed min-h-[150px]" style={{backgroundImage: `url(${blok?.logo?.filename})`}}
     >
         <p>HEJ FRÅN HEADER!!!</p>
     </div>
   );
 }
+s
