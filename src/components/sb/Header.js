@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 
 
 export default function Header({ blok }) {
-console.log("header::::",blok)
+
   return (
     <div
       {...storyblokEditable(blok)} className="w-full bg-fixed min-h-[150px]" style={{backgroundImage: `url(${blok?.logo?.filename})`}}
